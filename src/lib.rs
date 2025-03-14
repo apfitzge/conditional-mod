@@ -1,9 +1,10 @@
 /// Conditionally declares a mod as public.
-macro_rules! conditional_pub_mod {
-    ($name:ident, $cond:meta) => {
+#[macro_export]
+macro_rules! conditional_vis_mod {
+    ($name:ident, $cond:meta, $conditional_vis:vis, $fallback_vis:vis) => {
         #[cfg($cond)]
-        pub mod $name;
+        $conditional_vis mod $name;
         #[cfg(not($cond))]
-        mod $name;
+        $fallback_vis mod $name;
     };
 }

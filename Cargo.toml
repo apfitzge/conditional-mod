@@ -2,5 +2,12 @@
 name = "conditional-mod"
 version = "0.1.0"
 edition = "2021"
+authors = ["Andrew Fitzgerald <apfitzge@gmail.com>"]
+description = "Simple rust macro for conditional module visibility"
+readme = "README.md"
+homepage = "https://github.com/apfitzge/conditional-mod"
+repository = "https://github.com/apfitzge/conditional-mod"
+license-file = "LICENSE"
+include = ["src/*.rs", "Cargo.toml"]
 
 [dependencies]
